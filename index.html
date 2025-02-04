@@ -3,50 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MulliMovie</title>
+    <title>SeMovie</title>
     <link
-      rel="icon"
-      href="https://p1.hiclipart.com/preview/365/513/290/movie-logo-photographic-film-movie-camera-cinema-movie-projector-video-cameras-cinema-camera-circle-png-clipart.jpg"
-      type="image/png"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body class="bg-dark text-light">
-    <header class="header border-bottom">
-      <figure>
-        <img
-          src="./images/DALL·E 2025-01-08 00.50.14 - A logo design for 'Mullimovie' with the text changed to 'Mullifilm,' featuring bold vintage typography. The colors are black and red, with a clean whi.webp"
-          alt="myAppLogo"
+  <body class="bg-dark">
+    <header class="header">
+      <h1 class="title">SeMovie</h1>
+
+      <button
+        type="button"
+        id="searchBtn"
+        class="search-btn btn"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        data-bs-title="Search"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <div id="searchPart">
+        <input
+          type="text"
+          class="search-input"
+          id="input"
+          placeholder="Search..."
         />
-
-        <span>MulliMovie</span>
-      </figure>
-
-      <nav>
-        <ul>
-          <li>
-            <a href="">Lorem.</a>
-          </li>
-          <li>
-            <a href="">Lorem.</a>
-          </li>
-          <li>
-            <a href="">Lorem.</a>
-          </li>
-          <li>
-            <a href="">Lorem.</a>
-          </li>
-        </ul>
-      </nav>
+        <button class="btn btn-danger button" id="button">search</button>
+      </div>
     </header>
+    <div id="loading" style="display: none; text-align: center; margin-top: 20px;">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    
+    <main class="container">
+      <div class="row" id="cards">
+        <!-- <div class="col-4">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+              class="card-img-top"
+              height="350px"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              b5
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>
